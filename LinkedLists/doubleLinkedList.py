@@ -10,7 +10,7 @@ class LinkedList :
 
 	def add( self, data ) :
 		node = Node( data )
-		if self.head == None :	
+		if self.head == None :
 			self.head = node
 		else :
 			node.next = self.head
@@ -43,14 +43,13 @@ class LinkedList :
 			s += p.data
 		return s
 
-# example code
+# Test Section
 l = LinkedList()
 
 l.add( 'a' )
 l.add( 'b' )
 l.add( 'c' )
 
-print l
+print (l)
 l.remove( l.search( 'b' ) )
-print
-print l
+print (l)
