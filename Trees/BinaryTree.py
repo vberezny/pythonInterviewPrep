@@ -1,3 +1,7 @@
+#height of complete binary tree with N nodes is at most O(log N)
+
+#full binary tree is when each node has exactly 0 or 2 children
+
 class Node:
 
     def __init__(self, data):
