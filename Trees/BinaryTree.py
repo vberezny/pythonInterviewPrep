@@ -35,14 +35,50 @@ class Node:
         if self.right:
             self.right.PrintTree()
 
+# In-order Traversal
+# Left -> Root -> Right
+    def InorderTraversal(self, root):
+        res = []
+        if root:
+            res = self.InorderTraversal(root.left)
+            res.append(root.data)
+            res = res + self.InorderTraversal(root.right)
+        return res
+
+# Preorder traversal
+# Root -> Left ->Right
+    def PreorderTraversal(self, root):
+        res = []
+        if root:
+            res.append(root.data)
+            res = res + self.PreorderTraversal(root.left)
+            res = res + self.PreorderTraversal(root.right)
+        return res
+
+# Postorder traversal
+# Left ->Right -> Root
+    def PostorderTraversal(self, root):
+        res = []
+        if root:
+            res = self.PostorderTraversal(root.left)
+            res = res + self.PostorderTraversal(root.right)
+            res.append(root.data)
+        return res
+
 # initializes tree root
 root = Node(12)
 
 # inserts nodes
-root.insert(6)
+root = Node(27)
 root.insert(14)
-root.insert(3)
-root.insert(18)
-root.insert(21)
+root.insert(35)
+root.insert(10)
+root.insert(19)
+root.insert(31)
+root.insert(42)
 
 root.PrintTree()
+
+print("post: ", root.PostorderTraversal(root))
+print("pre: ", root.PreorderTraversal(root))
+print("in: ", root.InorderTraversal(root))
