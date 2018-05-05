@@ -10,11 +10,11 @@ A heap is not a sorted structure and can be regarded as partially ordered
 
 The root element will be at Arr[0]
 
-'''Arr[i/2]''' 	Returns the parent node
+```Arr[i/2]``` 	Returns the parent node
 
-'''Arr[(2*i)+1]''' 	Returns the left child node
+```Arr[(2*i)+1]``` 	Returns the left child node
 
-'''Arr[(2*i)+2]''' Returns the right child node
+```Arr[(2*i)+2]``` Returns the right child node
 
 ### HeapSort
 Heap Sort uses Binary Heap to sort an array in O(nLogn) time.
