@@ -14,5 +14,5 @@ Arr[(2*i)+1] 	Returns the left child node
 
 Arr[(2*i)+2] 	Returns the right child node
 
-#HeapSort 
+#HeapSort
 Heap Sort uses Binary Heap to sort an array in O(nLogn) time.
