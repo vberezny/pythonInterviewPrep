@@ -65,6 +65,22 @@ class Node:
             res.append(root.data)
         return res
 
+# Level-Order (BFS)
+    def LevelOrderTraversal(self, root):
+        thisLevel = [root]
+        vals = [root.data]
+        while thisLevel:
+            nextLevel = []
+            for n in thisLevel:
+                if n.left:
+                    nextLevel.append(n.left)
+                    vals.append(n.left.data)
+                if n.right:
+                    nextLevel.append(n.right)
+                    vals.append(n.right.data)
+            thisLevel = nextLevel
+        return vals
+
 # initializes tree root
 root = Node(12)
 
@@ -82,3 +98,4 @@ root.PrintTree()
 print("post: ", root.PostorderTraversal(root))
 print("pre: ", root.PreorderTraversal(root))
 print("in: ", root.InorderTraversal(root))
+print("level: ", root.LevelOrderTraversal(root))
